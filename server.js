@@ -349,4 +349,4 @@ app.post('/setdata',authenticateTokentp ,async(req,res)=>{
 
 });
 
-app.listen(port,()=>{console.log("server is running")});
+app.listen(port,()=>{console.log(`server is ${port} running`)});
