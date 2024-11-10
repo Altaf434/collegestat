@@ -139,7 +139,7 @@ async function checkUser(username, password) {
 }
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
-app.get('/login',(req,res)=>{ res.sendFile(path.join(__dirname,'src','index.html'))});
+app.get('/login',(req,res)=>{ res.sendFile(path.join(__dirname,'public','index.html'))});
 app.get('/verify',async(req,res)=>{
     
   
