@@ -29,7 +29,7 @@ const serviceAccount = {
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: process.env.DATABASE_URL
+  databaseURL: "https://hanessh-bc265-default-rtdb.asia-southeast1.firebasedatabase.app"
 });
 
 const db = admin.database();
