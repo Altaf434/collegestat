@@ -2,8 +2,9 @@ const express = require('express');
 const path = require('path');
 const app=express();
 const port=3000;
+const cors=require('cors');
 
-
+app.use(cors());
 
 const { v4: uuidv4 } = require('uuid'); 
 
@@ -137,6 +138,7 @@ async function checkUser(username, password) {
       return false; 
     });
 }
+
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
 app.get('/login',(req,res)=>{ res.sendFile(path.join(__dirname,'public','index.html'))});
